@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:junaid_frontend/appBar.dart';
 import 'package:junaid_frontend/images.dart';
+import 'package:junaid_frontend/pageView.dart';
 import 'package:junaid_frontend/row_col.dart';
 import 'package:junaid_frontend/textfields.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: LoginScreen()
+      home: PageviewScreen()
     );
   }
 }
