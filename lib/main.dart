@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:junaid_frontend/appBar.dart';
+import 'package:junaid_frontend/date_time_picker.dart';
 import 'package:junaid_frontend/images.dart';
 import 'package:junaid_frontend/pageView.dart';
 import 'package:junaid_frontend/row_col.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: PageviewScreen()
+      home: DateTimePicker()
     );
   }
 }
