@@ -6,9 +6,15 @@ import 'package:junaid_frontend/images.dart';
 import 'package:junaid_frontend/pageView.dart';
 import 'package:junaid_frontend/row_col.dart';
 import 'package:junaid_frontend/textfields.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (context)=> UserProvider()),
+          ],
+          child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
