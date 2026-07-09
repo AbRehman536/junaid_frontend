@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tahir_frontend/pass_parameters/screen_2.dart';
+import 'package:junaid_frontend/pass_parameters/screen_2.dart';
 
 
 class Screen1 extends StatelessWidget {

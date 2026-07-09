@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:junaid_frontend/provider/provider.dart';
 import 'package:provider/provider.dart';
-import 'package:tahir_frontend/pass_parameters/screen_2.dart';
-import 'package:tahir_frontend/provider/provider.dart';
 
 
 class ScreenB extends StatelessWidget {

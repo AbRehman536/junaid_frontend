@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'date_time_picker.dart';
 import 'images.dart';
-import 'listTile.dart';
 
 class BottomBarScreen extends StatefulWidget {
   const BottomBarScreen({super.key});
@@ -13,7 +12,7 @@ class BottomBarScreen extends StatefulWidget {
 
 class _BottomBarScreenState extends State<BottomBarScreen> {
   List<Widget> screenList = [
-    ChatsScreen(),
+    //ChatsScreen(),
     ImagesDemo(),
     DateTimePicker()
   ];
