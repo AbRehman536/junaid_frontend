@@ -37,6 +37,7 @@ dependencies:
   smooth_page_indicator: ^2.0.1
   intl: ^0.20.3
   provider:
+  pinput: ^6.0.2
 
 
 dev_dependencies:
