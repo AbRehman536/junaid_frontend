@@ -38,6 +38,7 @@ dependencies:
   intl: ^0.20.3
   provider:
   pinput: ^6.0.2
+  google_maps_flutter: ^2.14.2
 
 
 dev_dependencies:
