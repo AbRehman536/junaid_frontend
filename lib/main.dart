@@ -6,18 +6,23 @@ import 'package:junaid_frontend/images.dart';
 import 'package:junaid_frontend/listview.dart';
 import 'package:junaid_frontend/pageView.dart';
 import 'package:junaid_frontend/provider/provider.dart';
+import 'package:junaid_frontend/provider/theme_provider.dart';
 import 'package:junaid_frontend/row_col.dart';
 import 'package:junaid_frontend/selections/multiple.dart';
 import 'package:junaid_frontend/selections/single.dart';
 import 'package:junaid_frontend/settings.dart';
 import 'package:junaid_frontend/textfields.dart';
+import 'package:junaid_frontend/theme.dart';
 import 'package:provider/provider.dart';
+
+import 'animations.dart';
 
 void main() {
   runApp(
       MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (context)=> UserProvider()),
+            ChangeNotifierProvider(create: (context)=> ThemeProvider()),
           ],
           child: const MyApp()));
 }
@@ -28,27 +33,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var themeProvider = Provider.of<ThemeProvider>(context);
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: SettingsScreen()
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: themeProvider.themeMode,
+
+      home: ThemeScreen()
     );
   }
 }
